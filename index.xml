@@ -31,7 +31,7 @@
                 // handle positioning
                 h = h.rotateX(95);
                 h = h.translate([0, -12, 3]);
-    
+
                 h = difference(
                     h,
                     union(
@@ -95,13 +95,13 @@
                 var size = params.size;
                 var spork = params.spork;
     
-                var scoopHead, diff, prong, scoopEnd;
+                var scoopHead, diff, prong;
 
                 // parts
                 diff = cylinder({
                     r: 8,
                     h: 20
-                });
+                }).rotateX(90).translate([0, 7, 14]);
 
                 prong = cylinder({
                     r1: 0.75,
@@ -112,25 +112,18 @@
 
                 // transformations
                 // creates scoop base
-                scoopHead =  intersection(
+                scoopHead = intersection(
                     sphere(10), 
-                    diff.rotateX(90).translate([0, 7, 14])
+                    diff
                 );
 
                 scoopHead = scoopHead.rotateY(180);
-
-                // hollows out scoop
-                scoopHead = difference(
-                    scoopHead, 
-                    scoopHead.translate([0, 0, 1])
-                );
 
                 // creates fork or spork prongs
                 if (spork) { 
                     prong = prong.translate([0, 8, -1.3]);
                     prong = prong.scale([1.5, 1, 6]);
                 }
-
                 else { 
                     prong = prong.translate([0, 2.5, -1.3]);
                     prong = prong.scale([1, 1, 6]);
@@ -138,19 +131,22 @@
 
                 scoopHead = difference(
                     scoopHead,
+                    scoopHead.translate([0, 0, 1])
                     prong,
                     prong.translate([-2, 0, 0]),
                     prong.translate([2, 0, 0])
                 );
 
                 // shaves off the sides -- spork to fork! 
-                if (!spork) { prong = prong.scale([3, 2, 2]); }
-                 
-                scoopHead = difference(
-                    scoopHead,
-                    prong.translate([-5, -3, 8]),
-                    prong.translate([5, -3, 8])
-                );
+                if (!spork) { 
+                    prong = prong.scale([3, 2, 2]);
+                    prong = prong.translate([0, -3, 8])
+                    scoopHead = difference(
+                        scoopHead,
+                        prong.translate([-5, 0, 0]),
+                        prong.translate([5, 0, 0])
+                    );
+                }
 
                 return scoopHead.translate([0, 0.5, 10.5]).rotateX(15);
             }
