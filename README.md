@@ -6,7 +6,6 @@ Parameterized fork model.
 	$ npm install craft-fork
 
 ### Parameters
-- size: scales model
 - length: adjusts length of fork
 - spork: adjusts between fork and spork
 	- 0 = fork
@@ -17,7 +16,9 @@ Parameterized fork model.
 <craft>
 	<craft name="fork" module="craft-fork"/>
 	<lineup spacing = "2">
-		<fork length="15" size="2"></fork>
+		<scale factor="2">
+			<fork length="15"></fork>
+		</scale>
 		<fork length="20" spork="1"></fork>
 		<fork></fork>
 	</lineup>
