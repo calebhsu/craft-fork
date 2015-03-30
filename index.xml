@@ -6,10 +6,8 @@
         <!-- Handle -->
         <script type="text/openjscad">
             function main() {
-                var length = params.length;
-    
                 // handles minimum length
-                if (length < 15) { length = 15; }
+                if (params.length < 15) { params.length = 15; }
     
                 var handleDiff, h;
     
@@ -22,7 +20,7 @@
                 h = cylinder({
                     r1: 1.5,
                     r2: 2,
-                    h: length,
+                    h: params.length,
                     fn: 6
                 }).scale([1, 0.4, 1]);
     
@@ -88,8 +86,6 @@
         
         <script type="text/openjscad">
             function main() {
-                var spork = params.spork;
-    
                 var scoopHead, diff, prong;
 
                 // parts
@@ -115,7 +111,7 @@
                 scoopHead = scoopHead.rotateY(180);
 
                 // creates fork or spork prongs
-                if (spork) { 
+                if (params.spork) { 
                     prong = prong.translate([0, 8, -1.3]);
                     prong = prong.scale([1.5, 1, 6]);
                 }
@@ -133,7 +129,7 @@
                 );
 
                 // shaves off the sides -- spork to fork! 
-                if (!spork) { 
+                if (!params.spork) { 
                     prong = prong.scale([3, 2, 2]);
                     prong = prong.translate([0, -3, 8]);
                     scoopHead = difference(
