@@ -4,7 +4,7 @@
     
     <group>
         <!-- Handle -->
-        <script type="text/openjscad">
+        <script type="text/craftml">
             function main() {
                 // handles minimum length
                 if (params.length < 15) { params.length = 15; }
@@ -42,7 +42,7 @@
         </script>
     
         <!-- Neck -->
-        <script type="text/openjscad">
+        <script type="text/craftml">
             function main() {
                 var curve, neck, neckDiff;
     
@@ -84,7 +84,7 @@
             }
         </script>
         
-        <script type="text/openjscad">
+        <script type="text/craftml">
             function main() {
                 var scoopHead, diff, prong;
 
@@ -118,7 +118,7 @@
                 else { 
                     prong = prong.translate([0, 2.5, -1.3]);
                     prong = prong.scale([1, 1, 6]);
-                }z
+                }
 
                 scoopHead = difference(
                     scoopHead,
