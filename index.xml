@@ -3,9 +3,9 @@
     <parameter name="spork" type="int" default="0"/>
     
     <group>
-        <!-- Handle -->
-        <script type="text/craftml">
+        <script>
             function main() {
+                // Handle
                 // handles minimum length
                 if (params.length < 15) { params.length = 15; }
     
@@ -41,9 +41,9 @@
             }
         </script>
     
-        <!-- Neck -->
-        <script type="text/craftml">
+        <script>
             function main() {
+                // Neck
                 var curve, neck, neckDiff;
     
                 // parts
@@ -84,8 +84,9 @@
             }
         </script>
         
-        <script type="text/craftml">
+        <script>
             function main() {
+                // Head
                 var scoopHead, diff, prong;
 
                 // parts
