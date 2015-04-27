@@ -1,4 +1,4 @@
-<craft>
+<craft name="fork">
     <parameter name="length" type="int" default="30"/>
     <parameter name="spork" type="int" default="0"/>
     
