@@ -2,7 +2,7 @@
     <parameter name="length" type="int" default="30"/>
     <parameter name="spork" type="int" default="0"/>
     
-    <column spacing="-3.5" align="x50 z{{-30}}">
+    <column spacing="-3.5" align="x50 z{{-30}}" color="silver">
         <column spacing="-1.5" align="x50 z40">
             <script>
                 function main() {
