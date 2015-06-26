@@ -2,8 +2,8 @@
     <parameter name="length" type="int" default="30"/>
     <parameter name="spork" type="int" default="0"/>
     
-    <column spacing="-3.5" align="x50 z{{-30}}" color="silver">
-        <column spacing="-1.5" align="x50 z40">
+    <col spacing="-3.5" layout="lineupZ(-6.6)" color="silver">
+        <col spacing="-1.5" layout="alignZ(40%)">
             <script>
                 function main() {
                     // Head
@@ -60,7 +60,7 @@
                         );
                     }
     
-                    return scoopHead.translate([0, 0.5, 10.5]).rotateX(15);
+                    return scoopHead.rotateX(15).rotateZ(180);
                 }
             </script>
             
@@ -103,10 +103,10 @@
                         sphere(4).scale([1, 2, 1]).translate([0, -14, 1.5]).rotateX(10)
                     ); 
         
-                    return neck;
+                    return neck.rotateZ(180);
                 }
             </script>
-        </column>
+        </col>
         
         <script>
             function main() {
@@ -142,9 +142,9 @@
                     sphere(4).scale([1, 2, 1]).translate([0, -14, 1.5]).rotateX(10)
                 );
     
-                return h;
+                return h.rotateZ(180);
             }
         </script>
-    </column>
+    </col>
     
 </craft>
