@@ -6,7 +6,7 @@
         * { color: silver; }
     </style>
     
-    <col spacing="-3.5" l="lineupZ(-6.6)">
+    <col spacing="-3.5" l="lineupZ(-6.6)" t="land()">
         <col spacing="-1.5" l="alignZ(40%)">
             <script type="text/openjscad">
                 function main() {
