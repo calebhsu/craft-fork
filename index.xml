@@ -2,7 +2,11 @@
     <parameter name="length" type="int" default="30"/>
     <parameter name="spork" type="int" default="0"/>
     
-    <col spacing="-3.5" l="lineupZ(-6.6)" color="silver">
+    <style>
+        * { color: silver; }
+    </style>
+    
+    <col spacing="-3.5" l="lineupZ(-6.6)">
         <col spacing="-1.5" l="alignZ(40%)">
             <script type="text/openjscad">
                 function main() {
