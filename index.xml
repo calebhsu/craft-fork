@@ -2,9 +2,9 @@
     <parameter name="length" type="int" default="30"/>
     <parameter name="spork" type="int" default="0"/>
     
-    <col spacing="-3.5" layout="lineupZ(-6.6)" color="silver">
-        <col spacing="-1.5" layout="alignZ(40%)">
-            <script>
+    <col spacing="-3.5" l="lineupZ(-6.6)" color="silver">
+        <col spacing="-1.5" l="alignZ(40%)">
+            <script type="text/openjscad">
                 function main() {
                     // Head
                     var scoopHead, diff, prong;
@@ -64,7 +64,7 @@
                 }
             </script>
             
-            <script>
+            <script type="text/openjscad">
                 function main() {
                     // Neck
                     var curve, neck, neckDiff;
@@ -108,7 +108,7 @@
             </script>
         </col>
         
-        <script>
+        <script type="text/openjscad">
             function main() {
                 // Handle
                 // handles minimum length

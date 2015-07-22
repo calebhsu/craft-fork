@@ -2,8 +2,13 @@
 
 Parameterized fork model.
 
-### Install
-    $ npm install craft-fork
+### Usage
+```html
+<craft>
+    <craft name="fork" module="craft-fork"/>
+    <fork></fork>
+</craft>
+```
 
 ### Parameters
 - length: adjusts length of fork
