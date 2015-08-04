@@ -21,7 +21,7 @@ Parameterized fork model.
 <craft>
     <craft name="fork" module="craft-fork"/>
     <row spacing="2">
-        <fork length="15" transform="scale(2,2,2)"></fork>
+        <fork length="15" t="scale(2 2 2)"></fork>
         <fork length="20" spork="1"></fork>
         <fork></fork>
     </row>
